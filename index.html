@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: black;
+            letter-spacing: 1.1pt;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -70%);
+            text-align: center;
+        }
+
+        #emoji {
+            position: absolute;
+            font-size: 50px;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        h4 {
+            display: inline;
+        }
+
+        a {
+            color: white;
+            font-style: italic;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* =========================================
+            Media Queries
+        ========================================= */
+        @media (max-width: 980px) {
+            body {
+                font-size: 2rem;
+            }
+
+            .cat {
+                font-size: 8em;
+            }
+
+            h4 {
+                font-size: 2em;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: white;
+            }
+
+            h4,
+            a {
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔱🌿🪶🗡️😈</h1>
+        <a href="https://twitter.com/travistrotto">
+            <h4>personal:</h4> twitter.com/travistrotto
+        </a><br>
+        <a href="https://twitter.com/inkypcs">
+            <h4>software:</h4> twitter.com/coffee2720
+        </a><br>
+        <a href="https://twitter.com/coffee2720">
+            <h4>illustration:</h4> twitter.com/travistrotto
+        </a><br>
+        <a>_</a><br>
+        <a href="https://github.com/travistrotto">
+            <h4>Github:</h4> github.com/travistrotto
+        </a><br>
+    </div>
+
+    <div id="emoji" style="position: absolute; font-size: 50px;">🗡️</div>
+    <script>
+        var emoji = document.getElementById('emoji');
+        document.onmousemove = function (e) {
+            var x = e.pageX - 25;
+            var y = e.pageY - 50;
+            emoji.style.left = x + 'px';
+            emoji.style.top = y + 'px';
+        };
+    </script>
+</body>
+
+</html>
